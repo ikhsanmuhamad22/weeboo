@@ -12,11 +12,11 @@ export default function InputSearch(){
     router.push(`/search/${searchRef.current.value}`)
   }
   return (
-    <div className="relative">
+    <form className="relative">
       <input placeholder="search anime ....." className="p-1 rounded w-full" ref={searchRef}/>
-      <button className="absolute top-1 end-3" onClick={handleSearch}>
+      <button type="submit" className="absolute top-1 end-3" onClick={handleSearch}>
       <MagnifyingGlass size={24} />
       </button>
-    </div>
+    </form>
   )
 }
