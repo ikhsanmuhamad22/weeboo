@@ -9,7 +9,10 @@ export default function InputSearch(){
   const router = useRouter()
   function handleSearch(e: any) {
     e.preventDefault()
-    router.push(`/search/${searchRef.current.value}`)
+    const searchValue = searchRef.current.value
+    if( searchValue ) {
+      router.push(`/search/${searchValue}`)
+    }
   }
   return (
     <form className="relative">
